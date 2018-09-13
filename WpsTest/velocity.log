@@ -1,0 +1,5 @@
+2017-03-16 10:13:45,022 - ResourceManager : unable to find resource 'metadata-template.vm' in any resource loader.
+2017-03-16 10:19:19,666 - ResourceManager : unable to find resource '/WpsTest/src/main/java/UtepTest/WpsTest/metadata-template.vm' in any resource loader.
+2017-03-16 10:20:34,840 - ResourceManager : unable to find resource 'C:\Users\sva162\Desktop\UtepTest\WpsTest\src\main\java\UtepTest\WpsTest\metadata-template.vm' in any resource loader.
+2017-03-16 10:22:24,487 - ResourceManager : unable to find resource 'C:\Programs\EclipsePlugins\metadata-template.vm' in any resource loader.
+2017-03-16 10:25:59,074 - ResourceManager : unable to find resource 'templates/metadata.vm' in any resource loader.

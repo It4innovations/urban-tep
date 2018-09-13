@@ -1,0 +1,137 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>tempNamespace</groupId>
+  <artifactId>tempProc</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>ProcTemplate</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <templateId>${templateid}</templateId>
+  </properties>
+
+	<build>
+     <plugins>
+       <plugin>
+         <artifactId>maven-compiler-plugin</artifactId>
+         <version>3.1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <relocations>
+                <relocation>
+                  <pattern>tempNamespace.tempProc</pattern>
+                  <shadedPattern>${packagename}</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+	  <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>properties-maven-plugin</artifactId>
+            <version>1.0.0</version>
+            <executions>
+                <execution>
+                    <phase>generate-resources</phase>
+                    <goals>
+                        <goal>write-project-properties</goal>
+                    </goals>
+                    <configuration>
+                        <outputFile>propertiesFile</outputFile>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+    <resources>
+    	<!-- 
+      <resource>
+        <directory>src/main/java/templates</directory>
+      </resource>
+       -->
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+   </build>
+   
+   <profiles>
+    <profile>
+        <id>changeoutput</id>
+        <build>
+            <directory>${buildpath}</directory>
+        </build>
+    </profile>
+  </profiles>
+   
+   <repositories>
+        <repository>
+            <id>boundless</id>
+            <name>Boundless Maven Repository</name>
+            <url>http://repo.boundlessgeo.com/main</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+        	<id>geo</id>
+        	<name>Geo Tools Repository</name>
+        	<url>http://download.osgeo.org/webdav/geotools</url>
+        	<snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    
+   <dependencies>
+   	  <dependency>
+   		<groupId>org.geotools</groupId>
+   		<artifactId>gt-process</artifactId>
+   		<version>14.3</version>
+   	  </dependency>
+	   <dependency>
+		    <groupId>cz.it4i.haas</groupId>
+		    <artifactId>HaasAdapter</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+		    <scope>system</scope>
+		     <systemPath>C:\Programs\EclipsePlugins\HaasAdapter-0.0.1-SNAPSHOT.jar</systemPath> 
+		    <!--<systemPath>C:\UtepApps\JarPlugins\HaasAdapter-0.0.1-SNAPSHOT.jar</systemPath>  -->
+		</dependency>
+    <dependency>
+	    <groupId>commons-cli</groupId>
+	    <artifactId>commons-cli</artifactId>
+	    <version>1.3.1</version>
+	</dependency>
+   	<dependency>
+       <groupId>org.apache.velocity</groupId>
+       <artifactId>velocity</artifactId>
+       <version>1.7</version>
+   </dependency>
+    <dependency>
+   		<groupId>com.google.code.gson</groupId>
+    	<artifactId>gson</artifactId>
+    	<version>2.8.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>1.3.2</version>
+	</dependency>
+   </dependencies>
+</project>

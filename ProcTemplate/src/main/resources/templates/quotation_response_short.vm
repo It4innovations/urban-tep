@@ -1,0 +1,3 @@
+#foreach( $output in $outputs )
+$output
+#end

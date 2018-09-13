@@ -1,0 +1,3 @@
+#foreach( $output in $outputs )
+<wps:Reference href="$output" method="GET" mimeType="application/atom+xml" />
+#end

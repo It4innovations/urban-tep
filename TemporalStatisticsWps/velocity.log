@@ -1,0 +1,8 @@
+2017-03-27 10:04:19,071 - ResourceManager : unable to find resource 'C:\WpsTemplates\templates\metadata.vm' in any resource loader.
+2017-03-27 10:06:03,220 - ResourceManager : unable to find resource 'C:\WpsTemplates\templates\metadata.vm' in any resource loader.
+2017-03-27 10:09:26,769 - ResourceManager : unable to find resource './src/main/java/templates/metadata.vm' in any resource loader.
+2017-03-27 12:04:20,744 - ResourceManager : unable to find resource '/UrbanTepWps/src/main/java/templates/metadata.vm' in any resource loader.
+2017-03-27 12:05:57,063 - ResourceManager : unable to find resource 'metadata.vm' in any resource loader.
+2017-03-27 12:07:12,183 - ResourceManager : unable to find resource 'metadata.vm' in any resource loader.
+2017-03-27 12:08:00,144 - ResourceManager : unable to find resource '/UrbanTepWps/src/main/java/templates/execute_response.vm' in any resource loader.
+2017-03-27 12:08:00,144 - ResourceManager : unable to find resource '/UrbanTepWps/src/main/java/templates/execute_response.vm' in any resource loader.

@@ -1,0 +1,4 @@
+#Properties
+#Thu Sep 13 09:56:47 CEST 2018
+templateId=${templateid}
+project.build.sourceEncoding=UTF-8
