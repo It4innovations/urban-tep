@@ -1,0 +1,1 @@
+python ESA-merge-proc.py -i /scratch/work/user/voj76/TEST -o /scratch/work/user/voj76/TEST-result -ext tif -w 24
